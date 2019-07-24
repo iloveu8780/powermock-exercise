@@ -19,35 +19,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.xxx.xxx.domain;
+package com.github.yitan.utils;
+
 
 import java.math.BigDecimal;
 
-public class Person {
-    private final String firstName;
-    private final String lastName;
+public class SalaryCalculator {
 
-    private BigDecimal salary;
-
-    public Person(final String firstName, final String lastName, final BigDecimal salary) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.salary = salary;
+    static {
+        TimeUnit.sleep(5000);
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public BigDecimal getSalary() {
-        return salary;
-    }
-
-    public void setSalary(final BigDecimal salary) {
-        this.salary = salary;
+    public static BigDecimal calculate(BigDecimal salary) {
+        TimeUnit.sleep(5000);
+        return salary.add(BigDecimal.TEN);
     }
 }

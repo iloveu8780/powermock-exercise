@@ -1,7 +1,7 @@
-package com.xxx.xxx.controller;
+package com.github.yitan.controller;
 
-import com.xxx.xxx.domain.Person;
-import com.xxx.xxx.service.PersonService;
+import com.github.yitan.domain.Person;
+import com.github.yitan.service.PersonService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;

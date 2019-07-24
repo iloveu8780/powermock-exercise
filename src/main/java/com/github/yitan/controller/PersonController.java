@@ -19,16 +19,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.xxx.xxx.domain;
+package com.github.yitan.controller;
 
-public class PersonRequest {
-    private String name;
+import com.github.yitan.domain.Person;
+import com.github.yitan.domain.PersonRequest;
+import com.github.yitan.service.PersonService;
 
-    public PersonRequest(final String name) {
-        this.name = name;
+public class PersonController {
+
+    private final PersonService personService;
+
+    public PersonController(final PersonService personService) {
+        this.personService = personService;
     }
 
-    public String getName() {
-        return name;
+    public String getName(String name) {
+        PersonRequest request = new PersonRequest(name);
+        Person person = personService.find(request);
+        return person.getFirstName() + "," + person.getLastName();
     }
+
 }

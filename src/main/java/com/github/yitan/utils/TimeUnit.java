@@ -19,7 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.xxx.xxx.utils;
+package com.github.yitan.utils;
 
 public class TimeUnit {
     public static void sleep(long millis) {

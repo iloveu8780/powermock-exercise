@@ -19,24 +19,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.xxx.xxx.controller;
+package com.github.yitan.service;
 
-import com.xxx.xxx.domain.Person;
-import com.xxx.xxx.domain.PersonRequest;
-import com.xxx.xxx.service.PersonService;
+import com.github.yitan.domain.Person;
+import com.github.yitan.utils.SalaryCalculator;
+import com.github.yitan.domain.PersonRequest;
+import com.github.yitan.utils.TimeUnit;
 
-public class PersonController {
+import java.math.BigDecimal;
 
-    private final PersonService personService;
+public class PersonService {
 
-    public PersonController(final PersonService personService) {
-        this.personService = personService;
+    public Person find(final PersonRequest request) {
+        if (request.getName().equals("James")) {
+            Person person = new Person("Merson", "James", BigDecimal.TEN);
+            person.setSalary(SalaryCalculator.calculate(person.getSalary()));
+            TimeUnit.sleep(5000);
+            return person;
+        }
+        return new Person("None", "None", BigDecimal.ZERO);
     }
-
-    public String getName(String name) {
-        PersonRequest request = new PersonRequest(name);
-        Person person = personService.find(request);
-        return person.getFirstName() + "," + person.getLastName();
-    }
-
 }

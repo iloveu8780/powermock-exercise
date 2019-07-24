@@ -19,24 +19,35 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.xxx.xxx.service;
-
-import com.xxx.xxx.domain.Person;
-import com.xxx.xxx.domain.PersonRequest;
-import com.xxx.xxx.utils.SalaryCalculator;
-import com.xxx.xxx.utils.TimeUnit;
+package com.github.yitan.domain;
 
 import java.math.BigDecimal;
 
-public class PersonService {
+public class Person {
+    private final String firstName;
+    private final String lastName;
 
-    public Person find(final PersonRequest request) {
-        if (request.getName().equals("James")) {
-            Person person = new Person("Merson", "James", BigDecimal.TEN);
-            person.setSalary(SalaryCalculator.calculate(person.getSalary()));
-            TimeUnit.sleep(5000);
-            return person;
-        }
-        return new Person("None", "None", BigDecimal.ZERO);
+    private BigDecimal salary;
+
+    public Person(final String firstName, final String lastName, final BigDecimal salary) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public BigDecimal getSalary() {
+        return salary;
+    }
+
+    public void setSalary(final BigDecimal salary) {
+        this.salary = salary;
     }
 }

@@ -1,8 +1,8 @@
-package com.xxx.xxx.service;
+package com.github.yitan.service;
 
-import com.xxx.xxx.domain.Person;
-import com.xxx.xxx.domain.PersonRequest;
-import com.xxx.xxx.utils.TimeUnit;
+import com.github.yitan.domain.Person;
+import com.github.yitan.domain.PersonRequest;
+import com.github.yitan.utils.TimeUnit;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ import static org.powermock.api.support.membermodification.MemberModifier.suppre
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(TimeUnit.class)
-@SuppressStaticInitializationFor("com.xxx.xxx.utils.SalaryCalculator")
+@SuppressStaticInitializationFor("SalaryCalculator")
 public class PersonServiceTest {
 
     private PersonService personService;

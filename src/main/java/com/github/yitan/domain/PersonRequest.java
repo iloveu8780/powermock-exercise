@@ -19,19 +19,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package com.xxx.xxx.utils;
+package com.github.yitan.domain;
 
+public class PersonRequest {
+    private String name;
 
-import java.math.BigDecimal;
-
-public class SalaryCalculator {
-
-    static {
-        TimeUnit.sleep(5000);
+    public PersonRequest(final String name) {
+        this.name = name;
     }
 
-    public static BigDecimal calculate(BigDecimal salary) {
-        TimeUnit.sleep(5000);
-        return salary.add(BigDecimal.TEN);
+    public String getName() {
+        return name;
     }
 }
