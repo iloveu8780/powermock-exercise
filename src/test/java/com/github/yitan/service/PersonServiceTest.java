@@ -18,7 +18,7 @@ import static org.powermock.api.support.membermodification.MemberModifier.suppre
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(TimeUnit.class)
-@SuppressStaticInitializationFor("SalaryCalculator")
+@SuppressStaticInitializationFor("com.github.yitan.utils.SalaryCalculator")
 public class PersonServiceTest {
 
     private PersonService personService;
